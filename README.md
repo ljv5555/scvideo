@@ -9,7 +9,7 @@
 <body>
 <h2>======= scvideo =======</h2>
 <div>
-All content &copy; <script>document.write(''+new Date());</script>
+All content &copy; 
 </div>
 </body>
 </html>
