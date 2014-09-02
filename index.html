@@ -22,15 +22,10 @@
     }
     return src2;
   }
-  function showNextUrl(delay)
+  function showNextUrl()
   {
-    var to1 = 0;
-    if((''+delay).length>0){to=Number(''+delay);}
-    var f1 = function(){
       $('#i1').attr('src',getNextUrl());
       $('#u1').text($('#i1').attr('src'));
-    };
-    setTimeout(f1,to1);
   }
 </script>
 <title>scvideo</title>
@@ -47,6 +42,6 @@ body > *{margin:1em 1em;padding:0.5em 0.5em;border-radius:.25em;border:1px solid
 All content &copy; 
 </div>
 <div id="u1">some url...</div>
-<div><img id="i1" src="http://ljv5555.github.io/scvideo/data/shot000.jpg" onload="showNextUrl(500);"/></div>
+<div><img id="i1" src="http://ljv5555.github.io/scvideo/data/shot000.jpg" onload="setTimeout(showNextUrl,1000);" onerror="setTimeout(showNextUrl,1000);"/></div>
 </body>
 </html>
