@@ -33,6 +33,6 @@
 All content &copy; 
 </div>
 <div id="u1">some url...</div>
-<div><img id="i1" src="http://ljv5555.github.io/scvideo/data/shot000.jpg" onload="$(this).attr('src',getNextUrl());$('#u1').text($(this).attr('src'));"/></div>
+<div><img id="i1" src="http://ljv5555.github.io/scvideo/data/shot000.jpg" onload="setTimeout(function(){$(this).attr('src',getNextUrl());$('#u1').text($(this).attr('src'));},500);"/></div>
 </body>
 </html>
