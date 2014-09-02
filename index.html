@@ -2,6 +2,26 @@
 <html>
 <head>
 <script src="https//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+  function getNextUrl()
+  {
+    var src = $('#i1').attr('src');
+    vsr src2 = '';
+    if(src.indexOf('059')!=-1)
+    {
+      src2='http://ljv5555.github.io/scvideo/data/shot000.jpg?ts='+(new Date()).getTime();
+    }
+    else{
+      var s2 = src.split('shot')[1].split('.jpg')[0];
+      var n2 = Number(s2)+1;
+      var s3 = ''+n2;
+      if(s3.length<3){s3="0"+s3;}
+      if(s3.length<3){s3="0"+s3;}
+      src2 = 'http://ljv5555.github.io/scvideo/data/shot'+s3+'.jpg?ts='+(new Date()).getTime();
+    }
+  }
+  
+</script>
 <title>scvideo</title>
 </head>
 <style>body *{font-family:courier new}</style>
@@ -11,5 +31,6 @@
 <div>
 All content &copy; 
 </div>
+<div><img id="i1" src="http://ljv5555.github.io/scvideo/data/shot000.jpg"/></div></div>
 </body>
 </html>
