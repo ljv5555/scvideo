@@ -22,11 +22,18 @@
     }
     return src2;
   }
-  
+  function showNextUrl(delay)
+  {
+    var f1 = function(){$('#i1').attr('src',getNextUrl());$('#u1').text();};
+  }
 </script>
 <title>scvideo</title>
 </head>
-<style>body *{font-family:courier new}</style>
+<style>
+body *{font-family:courier new}
+#u1:color:blue;
+body > *{margin:1em 1em;padding:0.5em 0.5em;border-radius:.25em;border:1px solid blue;background:#def;}
+</style>
 <script></script>
 <body>
 <h2>======= scvideo =======</h2>
