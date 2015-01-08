@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<script>
+window.evalAll=function(e){document.quetySelector('#ta2').value = '' + eval(document.quetySelector('#ta1').value);};
+window.evalSelected=function(e){alert(0);};
+</script>
+<style>
+.d1{padding:0px;margin:0px;}
+.d1>div{margin:1em;padding:1em;background:rgba(200,200,200,.5);width:100%;}
+.pb,.pb button{text-align:center;vertical-align:middle;margin:.5em;padding:.5em;}
+</style>
+</head>
+<body>
+<div class="d1">
+  <div>
+    <textarea class="ein" id="ta1" title="input">
+      (
+        function()
+        {
+          return "rval";
+        }
+      )()
+    </textarea>
+  </div>
+  <div>
+    <button class="pb" type="button" onclick="evalAll(this);">eval selected</button>
+    <button class="pb" type="button" onclick="evalSelected(this);">eval selected</button>
+  </div>
+  <div>
+    <textarea class="eout" id="ta1" title="output"></textarea>
+  </div>
+</div>
+</body>
+</html>
