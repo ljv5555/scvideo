@@ -2,7 +2,7 @@
 <html>
 <head>
 <script>
-window.evalAll=function(e){document.quetySelector('#ta2').value = '' + eval(document.querySelector('#ta1').value);};
+window.evalAll=function(e){document.querySelector('#ta2').value = '' + eval(document.querySelector('#ta1').value);};
 window.evalSelected=function(e){alert(0);};
 </script>
 <style>
@@ -29,7 +29,7 @@ window.evalSelected=function(e){alert(0);};
     <button class="pb" type="button" onclick="evalSelected(this);">eval selected</button>
   </div>
   <div>
-    <textarea class="eout" id="ta1" title="output"></textarea>
+    <textarea class="eout" id="ta2" title="output"></textarea>
   </div>
 </div>
 </body>
