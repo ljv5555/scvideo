@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>jseval</title>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script>
 window.evalAll=function(e){document.querySelector('#ta2').value = '' + eval(document.querySelector('#ta1').value);};
 window.evalSelected=function(e){document.querySelector('#ta2').value = '' + eval(document.querySelector('#ta1').value).substring(document.querySelector('#ta1').selectionStart,document.querySelector('#ta1').selectionEnd);};
