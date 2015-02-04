@@ -24,7 +24,7 @@ body div:last-child{border:10px solid #444;height:1500px;}
 <div id="d1"></div><div>
 <img src="./noimg.jpg"
 onload="setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();document.getElementById('d1').innerHTML=(''+new Date());},1500);"
-onerror="setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();},5000);"
+onerror="window.open('http://192.168.1.250/image.jpg');setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();},5000);"
 /></div>
 </body>
 </html>
