@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>9609 main street 64114 - live video feed</title>
+<script src="jquery.js"></script>
+<style>
+body{color:white;background:black;}
+img
+{
+    
+    width:96%; 
+    margin-left:2%;
+    margin-right:2%;
+    height:770px;
+}
+div{overflow:visible;}
+body div:last-child{border:10px solid #444;height:1500px;}
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<div id="d1"></div><div>
+<img src="./noimg.jpg"
+onload="setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();document.getElementById('d1').innerHTML=(''+new Date());},1500);"
+onerror="window.open('http://192.168.1.250/image.jpg');setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();},5000);"
+/></div>
+</body>
+</html>
