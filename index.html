@@ -3,6 +3,17 @@
 <head>
 <title>9609 main street 64114 - live video feed</title>
 <script src="jquery.js"></script>
+<script>
+    setInterval(function(){
+        var h = jQuery(body).height();
+        var h2 = Math.round(0.9*h);
+        var m = Math.round(0.05*h);
+        jQuery('img').first().css('height',h2+'px');
+        jQuery('img').first().css('margin-top',m+'px');
+        jQuery('img').first().css('margin-bottom',m+'px');
+        
+    },30000);
+</script>
 <style>
 body{color:white;background:black;}
 img
@@ -24,7 +35,8 @@ body div:last-child{border:10px solid #444;height:1500px;}
 <div id="d1"></div><div>
 <img src="./noimg.jpg"
 onload="setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();document.getElementById('d1').innerHTML=(''+new Date());},1500);"
-onerror="window.open('http://192.168.1.250/image.jpg');setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();},5000);"
+onerror="setTimeout(function(){jQuery('iframe1').attr('src','http://192.168.1.250/image.jpg?dtt='+(new Date()).getTime());},15000);setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();},5000);"
 /></div>
+<iframe style="width:40px;height:40px;border:10px solid silver;" src="http://192.168.1.250/image.jpg" name="iframe1" id="iframe1"></iframe>
 </body>
 </html>
