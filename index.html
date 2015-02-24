@@ -5,13 +5,19 @@
 <script src="jquery.js"></script>
 <script>
     setInterval(function(){
+        
         var h = jQuery(body).height();
         var h2 = Math.round(0.9*h);
         var m = Math.round(0.05*h);
+        jQuery('.topdiv').toggleClass('blacktext');
         jQuery('img').first().css('height',h2+'px');
+        jQuery('.topdiv').toggleClass('blacktext');
         jQuery('img').first().css('margin-top',m+'px');
+        jQuery('.topdiv').toggleClass('blacktext');
         jQuery('img').first().css('margin-bottom',m+'px');
+        jQuery('.topdiv').toggleClass('blacktext');
         jQuery('body').scrollTop(1);
+        jQuery('.topdiv').toggleClass('blacktext');
         
     },30000);
 </script>
@@ -27,6 +33,9 @@ img
 }
 div{overflow:visible;}
 body div:last-child{border:10px solid #444;height:1500px;}
+iframe{width:40px;height:40px;border:10px solid silver;}
+.topdiv{display:inline-block;width:10px;height:10px;color:white;background:black;opacity:.9;}
+.blacktext{color:black;background:white;}
 </style>
 <script>
 
@@ -38,6 +47,6 @@ body div:last-child{border:10px solid #444;height:1500px;}
 onload="setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();document.getElementById('d1').innerHTML=(''+new Date());},1500);"
 onerror="setTimeout(function(){jQuery('iframe1').attr('src','http://192.168.1.250/image.jpg?dtt='+(new Date()).getTime());},15000);setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();},5000);"
 /></div>
-<iframe style="width:40px;height:40px;border:10px solid silver;" src="http://192.168.1.250/image.jpg" name="iframe1" id="iframe1"></iframe>
+<iframe src="http://192.168.1.250/image.jpg" name="iframe1" id="iframe1"></iframe>
 </body>
 </html>
