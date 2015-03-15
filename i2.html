@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body>div{
+width:90%;
+height:300px;
+margin: 5px 5% 5px 5%;
+background-color:white;
+color:black;
+}
+body>div.inverted{
+color:white;
+background-color:black;
+}
+</style>
+<script src="jquery.js></script>
+<script>
+  setTimeout(function(){setInterval(function(){jQuery('.idiv').toggleClass('inverted');},1000);},2000);
+</script>
+</head>
+<body>
+<div class="idiv">000</div>
+</body>
+</html>
