@@ -4,7 +4,7 @@
 <title>9609 main street 64114 - live video feed</title>
 <script src="jquery.js"></script>
 <script>
-    setInterval(function(){
+    var f1 = function(){
         
         var h = jQuery(window).height();
         var h2 = Math.round(0.9*h);
@@ -19,7 +19,10 @@
         jQuery('body').scrollTop(1);
         jQuery('.topdiv').toggleClass('blacktext');
         
-    },20000);
+    };
+    var f2 = function(){
+        
+    };
 </script>
 <style>
 body{color:white;background:black;}
@@ -36,20 +39,20 @@ body div:last-child{border:10px solid #444;height:1500px;}
 iframe{width:40px;height:40px;border:10px solid silver;}
 .topdiv{display:inline-block;width:10px;height:10px;color:white;background:black;opacity:.9;}
 .blacktext{color:black;background:white;}
+.maindiv span{
+    display:inline-block;
+    border: 3mm solid rgba(55,55,55,0.55) ;
+    width: 50%;
+    height: 50%;
+}
 </style>
 <script>
 </script>
 </head>
 <body>
-<div><span id="d1">-</span><span class="topdiv blacktext">X</span></div>
-
-<div>
-<img src="./noimg.jpg"
-onload="setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();document.getElementById('d1').innerHTML=(''+new Date());},1500);"
-onerror="setTimeout(function(){jQuery('iframe1').attr('src','http://192.168.1.250/image.jpg?dtt='+(new Date()).getTime());},15000);setTimeout(function(){document.getElementsByTagName('img')[0].src='http://192.168.1.250/image.jpg?cidx=384118589&dtt='+(new Date()).getTime();},5000);"
-/>
+<div id="maindiv" class="maindiv">
+    <span class="lspan"></span>
+    <span class="rspan"></span>
 </div>
-<iframe src="http://192.168.1.250/image.jpg" name="iframe1" id="iframe1"></iframe>
-<div></div>
 </body>
 </html>
