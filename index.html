@@ -12,10 +12,10 @@ img{margin: 5mm 5mm 5mm 5mm;}
 jQuery(function(){
   window.i1 = setInterval(function(){
     
+    jQuery('.d1').text(''+(new Date()));
     jQuery('.image').css('width',window.innerWidth*0.45+'px').css('height',window.innerHeight*0.8+'px');
     jQuery('.image1').attr('src',jQuery('.addr1').text()+'?_='+(new Date()).getTime());
     jQuery('.image2').attr('src',jQuery('.addr2').text()+'?_='+(new Date()).getTime());
-    
     
     
     
@@ -24,6 +24,7 @@ jQuery(function(){
 </script>
 </head>
 <body>
+  <div class="d1"></div>
 <table>
   <tr>
     <td class="addr addr1">http://192.168.1.250/image.jpg</td>
