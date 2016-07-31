@@ -17,6 +17,7 @@ jQuery(function(){
     jQuery('.image1').attr('src',jQuery('.addr1').text()+'?_='+(new Date()).getTime());
     jQuery('.image2').attr('src',jQuery('.addr2').text()+'?_='+(new Date()).getTime());
     
+    $('.dts').css('position','absolute').css('top','15mm').css('left','15mm').css('background-color','rgba(0,0,0,0.35)').css('padding','1mm 1mm 1mm 1mm').css('font-size','.3em');
     
     
   },1000);
@@ -24,15 +25,14 @@ jQuery(function(){
 </script>
 </head>
 <body>
-  <div class="d1"></div>
 <table>
   <tr>
     <td class="addr addr1">http://192.168.1.250/image.jpg</td>
     <td class="addr addr2">http://192.168.1.225/image.jpg</td>
   </tr>
   <tr>
-    <td><img class="image image1" src="http://192.168.1.250/image.jpg?cidx=709330863"/></td>
-    <td><img class="image image2" src="http://192.168.1.225/image.jpg?cidx=709330863"/></td>
+    <td><div class="dts d1"></div><img class="image image1" src="http://192.168.1.250/image.jpg?cidx=709330863"/></td>
+    <td><div class="dts d2"></div><img class="image image2" src="http://192.168.1.225/image.jpg?cidx=709330863"/></td>
   </tr>
 </table>
 </body>
