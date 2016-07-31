@@ -10,7 +10,16 @@ img{margin: 5mm 5mm 5mm 5mm;}
 
 <script>
 jQuery(function(){
-  
+  window.i1 = setInterval(function(){
+    
+    jQuery('.image').css('width',window.innerWidth*0.45+'px').css('height',window.innerHeight*0.8+'px');
+    jQuery('.image1').attr('src',jQuery('.addr1').text()+'?_='+(new Date()).getTime());
+    jQuery('.image2').attr('src',jQuery('.addr2').text()+'?_='+(new Date()).getTime());
+    
+    
+    
+    
+  },1000);
 });
 </script>
 </head>
