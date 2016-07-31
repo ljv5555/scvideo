@@ -32,8 +32,14 @@ jQuery(function(){
     }
     else
     {
-      var ts = window.location.href.split('?_=')[window.location.href.split('?_=').length-1];
-      jQuery('.htd1').text(ts);
+      var ts = Number(window.location.href.split('?_=')[window.location.href.split('?_=').length-1]);
+      var cts = (new Date()).getTime() - ts;
+      cts /= 1000;
+      jQuery('.htd1').text(cts);
+      if(cts>300)
+      {
+        window.location.href=window.location.href+"?_="+(new Date()).getTime();
+      }
     }
   },1000);
 });
