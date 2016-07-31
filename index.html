@@ -17,7 +17,15 @@ jQuery(function(){
     jQuery('.image1').attr('src',jQuery('.addr1').text()+'?_='+(new Date()).getTime());
     jQuery('.image2').attr('src',jQuery('.addr2').text()+'?_='+(new Date()).getTime());
     
-    $('.dts').css('position','absolute').css('top','15mm').css('left','15mm').css('background-color','rgba(0,0,0,0.35)').css('padding','1mm 1mm 1mm 1mm').css('font-size','.3em');
+    $('.d1').css('position','relative')
+    .css('top','15mm').css('left','15mm')
+    .css('background-color','rgba(0,0,0,0.35)')
+    .css('padding','1mm 1mm 1mm 1mm')
+    .css('font-size','.3em');
+    $('.d2').css('position','relative')
+    .css('background-color','rgba(0,0,0,0.35)')
+    .css('padding','1mm 1mm 1mm 1mm')
+    .css('font-size','.3em');
     
     
   },1000);
