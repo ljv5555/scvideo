@@ -30,12 +30,18 @@ jQuery(function(){
     {
       window.location.href=window.location.href+"?_="+(new Date()).getTime();
     }
+    else
+    {
+      var ts = window.location.href=window.location.href.split('?_=')[window.location.href.split('?_=').length-1];
+      jQuery('.hdt1').text(ts);
+    }
   },1000);
 });
 </script>
 </head>
 <body>
 <table>
+  <tr><td class="htd1"></td><td class="htd2"></td></tr>
   <tr>
     <td class="addr addr1">http://192.168.1.250/image.jpg</td>
     <td class="addr addr2">http://192.168.1.225/image.jpg</td>
