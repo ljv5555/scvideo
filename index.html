@@ -35,7 +35,9 @@ jQuery(function(){
       var ts = Number(window.location.href.split('?_=')[window.location.href.split('?_=').length-1]);
       var cts = (new Date()).getTime() - ts;
       cts /= 1000;
-      jQuery('.htd1').text(cts);
+      cts = Math.round(cts);
+      var ctsd = 300-cts;
+      jQuery('.htd1').text(ctsd);
       if(cts>300)
       {
         window.location.href=window.location.href+"?_="+(new Date()).getTime();
