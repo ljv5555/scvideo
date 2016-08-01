@@ -18,18 +18,18 @@ jQuery(function(){
   window.i1 = setInterval(function(){
     
     jQuery('.dts').text(''+(new Date())).css('display','inline-block');
-    jQuery('.image').css('width',window.innerWidth*0.45+'px').css('height',window.innerHeight*0.8+'px');
+    jQuery('.image').css('width',window.innerWidth*0.45+'px').css('height',window.innerHeight*0.98+'px');
     jQuery('.image1').attr('src',jQuery('.addr1').text()+'?_='+(new Date()).getTime());
     jQuery('.image2').attr('src',jQuery('.addr2').text()+'?_='+(new Date()).getTime());
     
-    $('.d1').css('position','relative')
+    $('.d1,.d2').css('position','relative')
     .css('top','15mm').css('left','15mm')
     .css('background-color','rgba(0,0,0,0.35)')
     .css('padding','1mm 1mm 1mm 1mm')
-    $('.d2').css('position','relative')
+    /*$('.d2').css('position','relative')
     .css('top','15mm').css('left','15mm')
     .css('background-color','rgba(0,0,0,0.35)')
-    .css('padding','1mm 1mm 1mm 1mm')
+    .css('padding','1mm 1mm 1mm 1mm')*/
     if(window.location.href.split('?').length<2)
     {
       window.location.href=window.location.href+"?_="+(new Date()).getTime();
