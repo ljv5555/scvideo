@@ -10,6 +10,11 @@ img{margin: 5mm 5mm 5mm 5mm;}
 
 <script>
 jQuery(function(){
+  
+  setTimeout(function(){window.scrollTo(0,300);},5000);
+  setTimeout(function(){window.scrollTo(0,10);},7000);
+  
+  
   window.i1 = setInterval(function(){
     
     jQuery('.dts').text(''+(new Date())).css('display','inline-block');
@@ -38,7 +43,7 @@ jQuery(function(){
       cts = Math.round(cts);
       var ctsd = 300-cts;
       jQuery('.htd1').text(ctsd);
-      if(cts>300)
+      if(ctsd<=1)
       {
         window.location.href=window.location.href.split('?_=')[0]+"?_="+(new Date()).getTime();
       }
