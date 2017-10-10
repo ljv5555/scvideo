@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<title>9609 main street -- live video feed -- 64114-4045</title>
+<style>
+body, body *{font-family:helvetica;color:#fff;background:#000;font-size:1em;}
+img{margin: 5mm 5mm 5mm 5mm;}
+</style>
+<script src="jquery.js"></script>
+
+<script>
+jQuery(function(){
+  
+  setTimeout(function(){jQuery('img')[0].focus();window.scrollTo(0,0000);},5000);
+  setTimeout(function(){window.scrollTo(0,1000);},7000);
+  
+  
+  window.i1 = setInterval(function(){
+    
+    jQuery('.dts').text(''+(new Date())).css('display','inline-block');
+    jQuery('.image').css('width',window.innerWidth*0.45+'px').css('height',window.innerHeight*0.90+'px');
+    jQuery('.image1').attr('src',jQuery('.addr1').text()+'?_='+(new Date()).getTime());
+    jQuery('.image2').attr('src',jQuery('.addr2').text()+'?_='+(new Date()).getTime());
+    
+    $('.d1,.d2').css('position','relative')
+    .css('top','15mm').css('left','15mm')
+    .css('background-color','rgba(0,0,0,0.35)')
+    .css('padding','1mm 1mm 1mm 1mm')
+    /*$('.d2').css('position','relative')
+    .css('top','15mm').css('left','15mm')
+    .css('background-color','rgba(0,0,0,0.35)')
+    .css('padding','1mm 1mm 1mm 1mm')*/
+    if(window.location.href.split('?').length<2)
+    {
+      window.location.href=window.location.href+"?_="+(new Date()).getTime();
+    }
+    else
+    {
+      var ts = Number(window.location.href.split('?_=')[window.location.href.split('?_=').length-1]);
+      var cts = (new Date()).getTime() - ts;
+      cts /= 1000;
+      cts = Math.round(cts);
+      var ctsd = 300-cts;
+      jQuery('.htd1').text(ctsd);
+      if(ctsd<=1)
+      {
+        //window.location.href=window.location.href.split('?_=')[0]+"?_="+(new Date()).getTime();
+      }
+    }
+  },1000);
+});
+</script>
+</head>
+<body>
+<table>
+  <tr><td class="htd1"></td><td class="htd2"></td></tr>
+  <tr>
+    <td class="addr addr1">http://192.168.1.250/image.jpg</td>
+    <td class="addr addr2">http://192.168.1.225/image.jpg</td>
+  </tr>
+  <tr>
+    <td><div class="dts d1"></div><img class="image image1" src="http://192.168.1.250/image.jpg?cidx=709330863"/></td>
+    <!--td><div class="dts d2"></div><img class="image image2" src="http://192.168.1.225/image.jpg?cidx=709330863"/></td-->
+  </tr>
+</table>
+</body>
+</html>
